@@ -11,11 +11,20 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h1>I am John</h1>
+            <h1>I'm John</h1>
             <h4>freelance web and mobile UX/UI designer</h4>
             <Link to="/contact" className="btn">
-              contact
+              contact me
             </Link>
+            <div className="social-links">
+              {socialLinks.map(link => {
+                return (
+                  <a href={link.url} key={link.id} className="social-link">
+                    {link.icon}
+                  </a>
+                )
+              })}
+            </div>
           </div>
         </article>
         <StaticImage
